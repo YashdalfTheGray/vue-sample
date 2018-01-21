@@ -16,3 +16,7 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Resources
+
+* [Setting up Eslint with Vue](https://codeburst.io/tutorial-how-to-add-eslint-to-your-vue-js-project-ccfb84fab9)
