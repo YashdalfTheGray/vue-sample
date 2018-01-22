@@ -4,7 +4,9 @@
     "parser": "babel-eslint",
     "sourceType": "module"
   },
-  "plugins": ["html"],
+  "plugins": [
+    "html"
+  ],
   "rules": {
     "brace-style": ["error", "stroustrup"],
     "class-methods-use-this": ["off"],
