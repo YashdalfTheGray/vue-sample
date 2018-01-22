@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const friendlyFormatter = require('eslint-friendly-formatter');
 
 module.exports = {
     entry: './src/main.js',
@@ -12,9 +13,12 @@ module.exports = {
         rules: [
             {
                 enforce: 'pre',
-                test: /\.js$/,
+                test: /\.(js|vue)$/,
                 loader: 'eslint-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options: {
+                    formatter: friendlyFormatter
+                }
             },
             {
                 test: /\.css$/,
