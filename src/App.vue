@@ -4,17 +4,15 @@
         <h1>{{ msg }}</h1>
         <h2>Essential Links</h2>
         <ul>
-            <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-            <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-            <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-            <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+            <li v-for="e in essentialLinks">
+                <a :href="e.link" target="_blank">{{e.name}}</a>
+            </li>
         </ul>
         <h2>Ecosystem</h2>
         <ul>
-            <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-            <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-            <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-            <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+            <li v-for="e in ecosystemLinks">
+                <a :href="e.link" target="_blank">{{e.name}}</a>
+            </li>
         </ul>
     </div>
 </template>
@@ -24,7 +22,19 @@ export default {
     name: 'app',
     data() {
         return {
-            msg: 'Welcome to Your Vue.js App'
+            msg: 'Welcome to Your Vue.js App',
+            essentialLinks: [
+                { link: 'https://vuejs.org', name: 'Core Docs' },
+                { link: 'https://forum.vuejs.org', name: 'Forum' },
+                { link: 'https://chat.vuejs.org', name: 'Community Chat' },
+                { link: 'https://twitter.com/vuejs', name: 'Twitter' }
+            ],
+            ecosystemLinks: [
+                { link: 'http://router.vuejs.org/', name: 'vue-router' },
+                { link: 'http://vuex.vuejs.org/', name: 'vuex' },
+                { link: 'http://vue-loader.vuejs.org/', name: 'vue-loader' },
+                { link: 'https://github.com/vuejs/awesome-vue', name: 'awesome-vue' }
+            ]
         }
     }
 }
