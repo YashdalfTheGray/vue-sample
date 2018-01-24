@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from './Growler.vue';
 
 // eslint-disable-next-line no-new
 new Vue({
