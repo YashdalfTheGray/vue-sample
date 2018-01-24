@@ -1,6 +1,6 @@
 <template>
     <div id="growler">
-        <h1 class="app-title">{{ appName }}</h1>
+        <h1 class="app-title" v-once>{{ appName }}</h1>
     </div>
 </template>
 
