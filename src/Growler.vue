@@ -1,6 +1,13 @@
 <template>
     <div id="growler">
         <h1 class="app-title" v-once>{{ appName }}</h1>
+        <input v-model="query" placeholder="Search" />
+        <label>
+            <input type="checkbox" v-model="isPowerSyntaxEnabled" />
+            Enable Power Mode
+        </label>
+        <p></p>
+        <div>Searching for: {{ query }}</div>
     </div>
 </template>
 
@@ -9,7 +16,9 @@ export default {
     name: 'growler',
     data() {
         return {
-            appName: 'Growler'
+            appName: 'Growler',
+            query: '',
+            isPowerSyntaxEnabled: false
         }
     }
 }
