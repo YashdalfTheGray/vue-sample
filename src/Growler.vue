@@ -1,7 +1,7 @@
 <template>
     <div id="growler">
         <h1 class="app-title" v-once>{{ appName }}</h1>
-        <input v-model="query" placeholder="Search" />
+        <input v-model.lazy.trim="query" placeholder="Search" />
         <label>
             <input type="checkbox" v-model="isPowerSyntaxEnabled" />
             Enable Power Mode
