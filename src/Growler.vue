@@ -66,15 +66,3 @@ export default {
     -moz-osx-font-smoothing: grayscale;
 }
 </style>
-
-
-<template>
-
-</template>
-
-
-<script>
-export default {
-  name: 'Normal'
-}
-</script>
