@@ -1,11 +1,14 @@
 <template>
     <div id="growler">
-        <md-app>
+        <md-app md-waterfall md-mode="fixed" class="growler-app-shell">
             <md-app-toolbar class="md-primary">
-                <span>{{ appName }}</span>
+                <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <h3 class="md-title" style="flex: 1">{{ appName }}</h3>
             </md-app-toolbar>
 
-            <md-app-drawer md-permanent="full">
+            <md-app-drawer :md-active.sync="menuVisible">
                 <md-toolbar class="md-transparent" md-elevation="0">
                     Navigation
                 </md-toolbar>
@@ -33,7 +36,13 @@
                 </md-list>
             </md-app-drawer>
 
-            <md-app-content>
+            <md-app-content class="md-scrollbar">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
@@ -53,6 +62,7 @@ export default {
     data() {
         return {
             appName: 'Growler',
+            menuVisible: false,
             query: '',
             isPowerSyntaxEnabled: false
         }
@@ -64,5 +74,9 @@ export default {
 #growler {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    flex: 1 1 auto;
+}
+.md-app {
+    flex: 1 1 auto;
 }
 </style>
