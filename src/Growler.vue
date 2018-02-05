@@ -26,6 +26,7 @@
         </md-app-drawer>
 
         <md-app-content class="md-scrollbar">
+            <search-bar></search-bar>
             <beer-grid></beer-grid>
         </md-app-content>
     </md-app>
@@ -33,6 +34,7 @@
 
 <script>
 import BeerGrid from './components/BeerGrid.vue';
+import SearchBar from './components/SearchBar.vue';
 
 export default {
     name: 'growler',
@@ -45,7 +47,8 @@ export default {
         }
     },
     components: {
-        BeerGrid
+        BeerGrid,
+        SearchBar
     }
 }
 </script>
