@@ -8,7 +8,7 @@
         </md-app-toolbar>
 
         <md-app-content class="md-scrollbar">
-            <search-bar v-if="searchVisible"></search-bar>
+            <search-bar v-show="searchVisible"></search-bar>
             <beer-grid></beer-grid>
         </md-app-content>
     </md-app>
