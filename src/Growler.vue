@@ -17,6 +17,9 @@
 <script>
 import BeerGrid from './components/BeerGrid.vue';
 import SearchBar from './components/SearchBar.vue';
+import beerService from './beerService';
+
+window.beerService = beerService;
 
 export default {
     name: 'growler',
