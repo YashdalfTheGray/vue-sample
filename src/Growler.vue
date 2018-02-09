@@ -9,7 +9,7 @@
 
         <md-app-content class="md-scrollbar">
             <search-bar v-show="searchVisible"></search-bar>
-            <beer-grid></beer-grid>
+            <beer-grid :beers="beers"></beer-grid>
         </md-app-content>
     </md-app>
 </template>
@@ -17,6 +17,7 @@
 <script>
 import BeerGrid from './components/BeerGrid.vue';
 import SearchBar from './components/SearchBar.vue';
+import beerService from './beerService.js';
 
 export default {
     name: 'growler',
@@ -25,8 +26,13 @@ export default {
             appName: 'Growler',
             searchVisible: false,
             query: '',
-            isPowerSyntaxEnabled: false
+            isPowerSyntaxEnabled: false,
+            beers: []
         }
+    },
+    async created() {
+        const response = await beerService.getBeers();
+        this.beers = response.value;
     },
     components: {
         BeerGrid,
