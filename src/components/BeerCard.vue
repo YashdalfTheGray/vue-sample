@@ -13,19 +13,15 @@
 </template>
 
 <script>
-import beerService from '../beerService';
-
 export default {
     name: 'beer-card',
     data() {
         return {
-            beer: {}
+            beer: {
+                name: 'Stuff',
+                description: 'Beer description'
+            }
         }
-    },
-    async created() {
-        const response = await beerService.getBeers();
-        console.log(response);
-        this.beer = response.value[0];
     }
 }
 </script>
