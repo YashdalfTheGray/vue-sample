@@ -2,9 +2,9 @@
     <md-content id="beer-grid" class="beer-list">
         <beer-card></beer-card>
         <beer-card></beer-card>
-        <beer-card></beer-card>
-        <beer-card></beer-card>
-        <beer-card></beer-card>
+        <pre>
+            {{beers}}
+        </pre>
     </md-content>
 </template>
 
@@ -13,9 +13,7 @@ import BeerCard from './BeerCard.vue';
 
 export default {
     name: 'beer-grid',
-    data() {
-        return {};
-    },
+    props: ['beers'],
     components: {
         BeerCard
     }
