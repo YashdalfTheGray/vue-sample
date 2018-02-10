@@ -1,5 +1,5 @@
 <template>
-    <md-card id="beer-card" v-cloak>
+    <md-card id="beer-card">
         <md-card-header>
             <div class="md-title">{{ beer.name }}</div>
         </md-card-header>
@@ -27,7 +27,5 @@ export default {
 </script>
 
 <style scoped>
-[v-cloak] {
-    display: none;
-}
+
 </style>

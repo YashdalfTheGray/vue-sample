@@ -1,5 +1,5 @@
 <template>
-    <md-content id="beer-grid" class="beer-list">
+    <md-content id="beer-grid" class="beer-list" v-cloak>
         <beer-card></beer-card>
         <beer-card></beer-card>
         <pre>
@@ -23,5 +23,8 @@ export default {
 <style scoped>
     .beer-list > * + * {
         margin-top: 8px;
+    }
+    [v-cloak] {
+        display: none;
     }
 </style>
