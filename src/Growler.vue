@@ -8,7 +8,7 @@
         </md-app-toolbar>
 
         <md-app-content class="md-scrollbar">
-            <search-bar v-show="searchVisible"></search-bar>
+            <search-bar v-show="searchVisible" :query-changed="searchQueryChanged"></search-bar>
             <beer-grid :beers="beers"></beer-grid>
         </md-app-content>
     </md-app>
@@ -28,6 +28,11 @@ export default {
             query: '',
             isPowerSyntaxEnabled: false,
             beers: []
+        }
+    },
+    methods: {
+        searchQueryChanged: function(val) {
+            console.log(val);
         }
     },
     async created() {

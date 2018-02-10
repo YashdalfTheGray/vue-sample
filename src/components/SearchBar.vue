@@ -10,11 +10,7 @@
 <script>
 export default {
     name: 'beer-search',
-    data() {
-        return {
-            query: ''
-        };
-    }
+    props: ['query']
 }
 </script>
 
