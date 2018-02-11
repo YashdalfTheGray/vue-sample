@@ -20,3 +20,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ## Resources
 
 * [Setting up Eslint with Vue](https://codeburst.io/tutorial-how-to-add-eslint-to-your-vue-js-project-ccfb84fab9)
+* [Vue getting started](https://github.com/ecofic/course-vue-getting-started/blob/master/src/final.html)
